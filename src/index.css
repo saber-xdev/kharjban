@@ -1,0 +1,383 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #070A0D;
+  --color-bg-soft: #0A0F14;
+  --color-bg-card: #0F141A;
+  --color-bg-elevated: #131A22;
+  --color-bg-hover: #1A222D;
+  --color-bg-border: #1A242F;
+  --color-bg-border-soft: #141C25;
+  --color-bg-glass: rgba(15, 20, 26, 0.72);
+  --color-text: #EAF2F0;
+  --color-text-muted: #8A9BA8;
+  --color-text-dim: #4F5D6B;
+  --color-primary: #10B981;
+  --color-primary-light: #34D399;
+  --color-primary-bright: #6EE7B7;
+  --color-primary-dark: #059669;
+  --color-primary-deep: #047857;
+  --color-primary-soft: rgba(16, 185, 129, 0.10);
+  --color-accent: #8B5CF6;
+  --color-accent-light: #A78BFA;
+  --color-gold: #F59E0B;
+  --color-danger: #F87171;
+  --color-success: #34D399;
+  --font-sans: "Vazirmatn", system-ui, sans-serif;
+  --radius-2xl: 20px;
+  --radius-3xl: 26px;
+}
+
+/* ============ پالت ۱: زمردی (پیش‌فرض) ============ */
+:root, :root[data-color="emerald"] {
+  --color-primary: #10B981;
+  --color-primary-light: #34D399;
+  --color-primary-bright: #6EE7B7;
+  --color-primary-dark: #059669;
+  --color-primary-deep: #047857;
+  --color-primary-soft: rgba(16, 185, 129, 0.10);
+  --primary-rgb: 16, 185, 129;
+  --color-accent: #8B5CF6;
+}
+
+/* ============ پالت ۲: سلطنتی ============ */
+:root[data-color="royal"] {
+  --color-primary: #8B5CF6;
+  --color-primary-light: #A78BFA;
+  --color-primary-bright: #C4B5FD;
+  --color-primary-dark: #7C3AED;
+  --color-primary-deep: #6D28D9;
+  --color-primary-soft: rgba(139, 92, 246, 0.12);
+  --primary-rgb: 139, 92, 246;
+  --color-accent: #EC4899;
+}
+
+/* ============ پالت ۳: اقیانوسی ============ */
+:root[data-color="ocean"] {
+  --color-primary: #0EA5E9;
+  --color-primary-light: #38BDF8;
+  --color-primary-bright: #7DD3FC;
+  --color-primary-dark: #0284C7;
+  --color-primary-deep: #0369A1;
+  --color-primary-soft: rgba(14, 165, 233, 0.12);
+  --primary-rgb: 14, 165, 233;
+  --color-accent: #06B6D4;
+}
+
+/* ============ پالت ۴: کهربایی ============ */
+:root[data-color="amber"] {
+  --color-primary: #F59E0B;
+  --color-primary-light: #FBBF24;
+  --color-primary-bright: #FCD34D;
+  --color-primary-dark: #D97706;
+  --color-primary-deep: #B45309;
+  --color-primary-soft: rgba(245, 158, 11, 0.12);
+  --primary-rgb: 245, 158, 11;
+  --color-accent: #EF4444;
+}
+
+/* ============ پالت ۵: رز ============ */
+:root[data-color="rose"] {
+  --color-primary: #F43F5E;
+  --color-primary-light: #FB7185;
+  --color-primary-bright: #FDA4AF;
+  --color-primary-dark: #E11D48;
+  --color-primary-deep: #BE123C;
+  --color-primary-soft: rgba(244, 63, 94, 0.12);
+  --primary-rgb: 244, 63, 94;
+  --color-accent: #F59E0B;
+}
+
+/* ============ تم روشن ============ */
+:root[data-theme="light"] {
+  --color-bg: #F5F7FA;
+  --color-bg-soft: #FFFFFF;
+  --color-bg-card: #FFFFFF;
+  --color-bg-elevated: #FFFFFF;
+  --color-bg-hover: #EFF2F6;
+  --color-bg-border: #E3E8EF;
+  --color-bg-border-soft: #EEF1F5;
+  --color-bg-glass: rgba(255, 255, 255, 0.75);
+  --color-text: #0B1219;
+  --color-text-muted: #64748B;
+  --color-text-dim: #94A3B8;
+  --color-danger: #EF4444;
+}
+
+/* روشن + پالت‌ها */
+:root[data-theme="light"][data-color="emerald"],
+:root[data-theme="light"]:not([data-color]) {
+  --color-primary: #059669;
+  --color-primary-light: #10B981;
+  --color-primary-bright: #34D399;
+  --color-primary-dark: #047857;
+  --color-primary-deep: #065F46;
+  --color-primary-soft: rgba(5, 150, 105, 0.10);
+}
+:root[data-theme="light"][data-color="royal"] {
+  --color-primary: #7C3AED;
+  --color-primary-light: #8B5CF6;
+  --color-primary-bright: #A78BFA;
+  --color-primary-dark: #6D28D9;
+  --color-primary-deep: #5B21B6;
+  --color-primary-soft: rgba(124, 58, 237, 0.10);
+}
+:root[data-theme="light"][data-color="ocean"] {
+  --color-primary: #0284C7;
+  --color-primary-light: #0EA5E9;
+  --color-primary-bright: #38BDF8;
+  --color-primary-dark: #0369A1;
+  --color-primary-deep: #075985;
+  --color-primary-soft: rgba(2, 132, 199, 0.10);
+}
+:root[data-theme="light"][data-color="amber"] {
+  --color-primary: #D97706;
+  --color-primary-light: #F59E0B;
+  --color-primary-bright: #FBBF24;
+  --color-primary-dark: #B45309;
+  --color-primary-deep: #92400E;
+  --color-primary-soft: rgba(217, 119, 6, 0.10);
+}
+:root[data-theme="light"][data-color="rose"] {
+  --color-primary: #E11D48;
+  --color-primary-light: #F43F5E;
+  --color-primary-bright: #FB7185;
+  --color-primary-dark: #BE123C;
+  --color-primary-deep: #9F1239;
+  --color-primary-soft: rgba(225, 29, 72, 0.10);
+}
+
+/* پس‌زمینه گرادیان */
+:root {
+  --bg-grad-1: rgba(var(--primary-rgb), 0.10);
+  --bg-grad-2: rgba(139, 92, 246, 0.07);
+  --bg-grad-3: rgba(var(--primary-rgb), 0.02);
+  --card-bg: linear-gradient(180deg, #0F141A 0%, #0C1219 100%);
+  --card-highlight: rgba(255, 255, 255, 0.05);
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.35);
+  --shadow-elevated: 0 12px 40px rgba(0, 0, 0, 0.5);
+  --hero-text: #EAF2F0;
+  --hero-text-muted: rgba(234, 242, 240, 0.55);
+  --hero-divider: rgba(255, 255, 255, 0.08);
+}
+
+:root[data-theme="light"] {
+  --bg-grad-1: rgba(var(--primary-rgb), 0.07);
+  --bg-grad-2: rgba(139, 92, 246, 0.04);
+  --bg-grad-3: rgba(var(--primary-rgb), 0.01);
+  --card-bg: linear-gradient(180deg, #FFFFFF 0%, #FBFDFF 100%);
+  --card-highlight: rgba(0, 0, 0, 0.03);
+  --shadow-soft: 0 4px 20px rgba(15, 20, 26, 0.06), 0 1px 0 rgba(255, 255, 255, 0.9) inset;
+  --shadow-elevated: 0 12px 40px rgba(15, 20, 26, 0.10), 0 1px 0 rgba(255, 255, 255, 1) inset;
+  --hero-text: #052E23;
+  --hero-text-muted: rgba(5, 46, 35, 0.6);
+  --hero-divider: rgba(var(--primary-rgb), 0.15);
+}
+
+@layer base {
+  * { -webkit-tap-highlight-color: transparent; }
+  html, body, #root { height: 100%; }
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overscroll-behavior-y: none;
+    margin: 0;
+    background-image:
+      radial-gradient(ellipse 60% 40% at 12% 0%, var(--bg-grad-1), transparent 60%),
+      radial-gradient(ellipse 50% 40% at 88% 100%, var(--bg-grad-2), transparent 60%),
+      radial-gradient(ellipse 40% 30% at 50% 50%, var(--bg-grad-3), transparent 70%);
+    background-attachment: fixed;
+    transition: background-color 0.35s ease, color 0.35s ease;
+  }
+  ::-webkit-scrollbar { width: 0; height: 0; }
+  input, button, textarea { font-family: inherit; }
+  button { -webkit-user-select: none; user-select: none; }
+}
+
+@layer components {
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--color-bg-border);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+    transition: background 0.35s ease, border-color 0.35s ease;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(180deg, var(--card-highlight), transparent 40%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  .card-glass {
+    background: var(--color-bg-glass);
+    backdrop-filter: blur(24px) saturate(140%);
+    -webkit-backdrop-filter: blur(24px) saturate(140%);
+    border: 1px solid rgba(var(--primary-rgb), 0.10);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-elevated);
+    position: relative;
+    transition: background 0.35s ease;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: var(--radius-2xl);
+    padding: 12px 18px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border: none;
+    letter-spacing: -0.01em;
+  }
+  .btn:active { transform: scale(0.96); }
+  .btn-primary {
+    background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-primary) 50%, var(--color-primary-dark) 100%);
+    color: #ffffff;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.25) inset,
+      0 -1px 0 rgba(0, 0, 0, 0.15) inset,
+      0 8px 24px rgba(var(--primary-rgb), 0.4);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  }
+  .btn-ghost {
+    background: var(--color-bg-hover);
+    color: var(--color-text);
+    border: 1px solid var(--color-bg-border);
+  }
+  .input {
+    width: 100%;
+    background: var(--color-bg-hover);
+    border: 1px solid var(--color-bg-border);
+    border-radius: var(--radius-2xl);
+    padding: 14px 18px;
+    color: var(--color-text);
+    outline: none;
+    transition: all 0.2s;
+    font-size: 15px;
+  }
+  .input::placeholder { color: var(--color-text-dim); }
+  .input:focus {
+    border-color: rgba(var(--primary-rgb), 0.5);
+    box-shadow: 0 0 0 4px var(--color-primary-soft);
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .hairline {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+  }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fade-up 0.45s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+@keyframes shine {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.tabular-nums { font-variant-numeric: tabular-nums; }
+
+/* ---------- Hero Card ---------- */
+.hero-card {
+  background:
+    linear-gradient(155deg, rgba(var(--primary-rgb), 0.18) 0%, rgba(var(--primary-rgb), 0.04) 35%, var(--color-bg-card) 75%);
+  border: 1px solid rgba(var(--primary-rgb), 0.22);
+  box-shadow:
+    0 24px 60px -20px rgba(var(--primary-rgb), 0.35),
+    0 1px 0 rgba(255,255,255,0.05) inset;
+  transition: background 0.35s ease, border-color 0.35s ease;
+}
+:root[data-theme="light"] .hero-card {
+  background:
+    linear-gradient(155deg, rgba(var(--primary-rgb), 0.15) 0%, rgba(var(--primary-rgb), 0.05) 45%, #FFFFFF 100%);
+  border: 1px solid rgba(var(--primary-rgb), 0.22);
+  box-shadow:
+    0 20px 50px -20px rgba(var(--primary-rgb), 0.25),
+    0 1px 0 rgba(255,255,255,0.9) inset;
+}
+.hero-grid {
+  opacity: 0.18;
+  background-image:
+    linear-gradient(rgba(var(--primary-rgb), 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--primary-rgb), 0.5) 1px, transparent 1px);
+  background-size: 24px 24px;
+  mask-image: radial-gradient(ellipse at top right, black 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at top right, black 20%, transparent 70%);
+}
+:root[data-theme="light"] .hero-grid { opacity: 0.14; }
+.hero-glow { background: var(--color-primary); opacity: 0.4; }
+:root[data-theme="light"] .hero-glow { opacity: 0.18; }
+
+/* ---------- بهینه‌سازی عملکرد ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* اجبار GPU برای انیمیشن‌ها */
+.hero-card,
+.card,
+.card-glass,
+.pill,
+.btn {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* سبک‌سازی blur روی گوشی */
+@media (max-width: 768px) {
+  .blur-\[140px\], .blur-\[130px\], .blur-\[120px\] {
+    filter: blur(60px) !important;
+  }
+  .blur-\[100px\] {
+    filter: blur(50px) !important;
+  }
+}
+
+/* جلوگیری از انیمیشن اضافه روی hover در موبایل */
+@media (hover: none) {
+  .btn-primary:hover { background: none; }
+  .btn-ghost:hover { background: var(--color-bg-hover); }
+}
+
+/* کاهش انیمیشن اگر کاربر خواسته */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* اسکرول نرم‌تر */
+.overflow-y-auto {
+  -webkit-overflow-scrolling: touch;
+}
