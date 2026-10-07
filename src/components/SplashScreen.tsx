@@ -93,7 +93,7 @@ export function SplashScreen() {
           }}
         >
           <img
-            src="/icon-512.png"
+            src="./icon-512.png"
             alt="خرج‌بان"
             className="w-full h-full object-cover"
           />

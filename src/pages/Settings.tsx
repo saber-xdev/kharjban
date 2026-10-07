@@ -13,6 +13,7 @@ import { useTheme, COLOR_PALETTES } from "../hooks/useTheme";
 import { useAuth } from "../components/AuthGate";
 import { ProfileSheet } from "../components/ProfileSheet";
 import { toFa } from "../lib/format";
+import { PageHeader } from "../components/layout/PageHeader";
 
 export function Settings({
   onOpenCategories,
@@ -92,6 +93,7 @@ export function Settings({
 
   return (
     <div className="pb-32">
+      <PageHeader />
       <header className="px-5 pt-8 pb-4">
         <h1 className="text-2xl font-bold text-primary">تنظیمات</h1>
       </header>

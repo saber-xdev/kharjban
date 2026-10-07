@@ -6,6 +6,7 @@ import {
 import { useExpenses, useMonthlyTotals } from "../hooks/useExpenses";
 import { useCategories } from "../hooks/useCategories";
 import { useAuth } from "../components/AuthGate";
+import { PageHeader } from "../components/layout/PageHeader";
 import { formatMoney, relativeDay, toFa } from "../lib/format";
 import { CategoryPie } from "../components/charts/CategoryPie";
 import { db } from "../db/db";
@@ -56,6 +57,7 @@ export function Home({
 
   return (
     <div className="pb-36 relative">
+      <PageHeader />
       <div
         className="absolute -top-32 left-1/2 -translate-x-1/2 w-[460px] h-[460px] rounded-full blur-[140px] opacity-20 pointer-events-none"
         style={{

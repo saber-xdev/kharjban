@@ -192,7 +192,7 @@ function RegisterScreen({ onDone }: { onDone: (u: User) => void }) {
                 "0 0 50px rgba(var(--primary-rgb),0.5), 0 0 100px rgba(var(--primary-rgb),0.25)",
             }}
           >
-            <img src="/icon-512.png" alt="خرج‌بان" className="w-full h-full object-cover" />
+            <img src="./icon-512.png" alt="خرج‌بان" className="w-full h-full object-cover" />
           </motion.div>
         </div>
 
@@ -373,7 +373,7 @@ function LockScreen({
                 "0 0 50px rgba(var(--primary-rgb),0.5), 0 0 100px rgba(var(--primary-rgb),0.25)",
             }}
           >
-            <img src="/icon-512.png" alt="خرج‌بان" className="w-full h-full object-cover" />
+            <img src="./icon-512.png" alt="خرج‌بان" className="w-full h-full object-cover" />
           </motion.div>
         </div>
 

@@ -8,6 +8,7 @@ import { formatMoney, relativeDay, dayKey } from "../lib/format";
 import { db } from "../db/db";
 import { useToast } from "../components/ui/Toast";
 import { cn } from "../lib/utils";
+import { PageHeader } from "../components/layout/PageHeader";
 import type { TxType } from "../types";
 
 type DateFilter = "today" | "week" | "month" | "all";
@@ -91,6 +92,7 @@ export function List({ onEdit }: { onEdit: (id: number) => void }) {
 
   return (
     <div className="pb-32">
+      <PageHeader />
       <header className="px-5 pt-8 pb-4">
         <h1 className="text-2xl font-bold text-primary">تراکنش‌ها</h1>
       </header>

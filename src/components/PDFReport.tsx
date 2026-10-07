@@ -114,7 +114,7 @@ export const PDFReport = forwardRef<HTMLDivElement, Props>(
                 }}
               >
                 <img
-                  src="/icon-512.png"
+                  src="./icon-512.png"
                   alt=""
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                   crossOrigin="anonymous"

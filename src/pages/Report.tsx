@@ -14,6 +14,7 @@ import { Card } from "../components/ui/Card";
 import { CategoryPie } from "../components/charts/CategoryPie";
 import { PDFReport } from "../components/PDFReport";
 import { PDFRangePicker, type DateRange } from "../components/PDFRangePicker";
+import { PageHeader } from "../components/layout/PageHeader";
 import { usePDFExport } from "../hooks/usePDFExport";
 import { formatMoney, toFa, relativeDay, dayKey, formatJalaliFull } from "../lib/format";
 import type { Category, Expense } from "../types";
@@ -189,6 +190,7 @@ export function Report() {
 
   return (
     <div className="pb-32">
+      <PageHeader />
       <header className="px-5 pt-8 pb-4 flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-primary">گزارش</h1>
